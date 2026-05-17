@@ -1,5 +1,7 @@
 # 北工大答辩 Beamer 模板（中文简洁版）
 
+> ⚠️ **非官方模板**：本项目由个人维护，与北京工业大学官方无关，不代表学校立场。
+
 从一份实际的硕士答辩简报中剥离内容后得到的纯模板，适合约 20 分钟的硕士 / 博士答辩。
 主题使用 `CambridgeUS + seahorse`——学术场合常见、清爽，不花哨。
 
@@ -60,21 +62,26 @@ latexmk -xelatex defense
 
 ## 使用步骤
 
-**第一步：填写论文信息**（`defense.tex` 开头标有 `% <-- 填` 的行）
+### 第一步：填写论文信息
+
+打开 `defense.tex`，修改开头标有 `% <-- 填` 的几行：
 
 ```latex
-\title[页眉短标题]{论文完整题目}
-\subtitle{硕士 / 博士学位论文答辩}
-\author[姓氏]{作者姓名}
-\institute[学校简称]{学院 \\ 学校 \\ \medskip 导师：\emph{导师姓名}~教授}
-\date{2025年6月}
+\title[页眉短标题]{论文完整题目}          % ← 改这里
+\subtitle{硕士 / 博士学位论文答辩}        % ← 改这里（或删除）
+\author[姓氏]{作者姓名}                   % ← 改这里
+\institute[学校简称]{学院 \\ 学校 \\ \medskip 导师：\emph{导师姓名}~教授}  % ← 改这里
+\date{2025年6月}                          % ← 改这里
 ```
 
-**第二步：替换 logo**
+### 第二步：替换 logo
 
-把 `figs/bjut_logo_color.pdf` 替换为自己学校的 logo 文件，或删除封面中的 `\titlegraphic{...}` 行。
+把 `figs/bjut_logo_color.pdf` 替换为自己学校的 logo，或直接删除这一行：
+```latex
+\titlegraphic{\includegraphics[height=1.3cm]{figs/bjut_logo_color.pdf}}
+```
 
-**第三步：逐张填内容**
+### 第三步：逐张填内容
 
 模板共 9 张幻灯片：
 
