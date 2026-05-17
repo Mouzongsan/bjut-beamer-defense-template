@@ -1,0 +1,177 @@
+% !TEX program = xelatex
+% =====================================================================
+%   硕士 / 博士学位论文答辩 Beamer 模板（中文简洁版）
+%   目标时长：约 20 分钟，共 8 张主体幻灯片 + 备用区
+%   编译：xelatex defense（运行两次）
+% =====================================================================
+\documentclass[10pt,aspectratio=169]{ctexbeamer}
+
+% ---------- 主题 ----------
+\usetheme{CambridgeUS}
+\usecolortheme{seahorse}
+\usefonttheme{professionalfonts}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]
+\setbeamertemplate{caption}[numbered]
+
+% ---------- 宏包 ----------
+\usepackage{amsmath,amssymb,bm,booktabs,graphicx}
+
+% ---------- 自定义命令 ----------
+\newcommand{\dd}{\mathop{}\!\mathrm{d}}
+\newcommand{\Tr}{\operatorname{Tr}}
+
+% ── 论文信息（填写这里）────────────────────────────────────
+\title[页眉短标题]{论文完整题目}          % <-- 填
+\subtitle{硕士 / 博士学位论文答辩}        % <-- 填或删
+\author[姓氏]{作者姓名}                   % <-- 填
+\institute[学校简称]{学院 \\ 学校 \\ \medskip 导师：\emph{导师姓名}~教授}  % <-- 填
+\date{年份年月份月}                       % <-- 填
+\titlegraphic{\includegraphics[height=1.3cm]{figs/bjut_logo_color.pdf}}
+% ──────────────────────────────────────────────────────────
+
+\begin{document}
+
+% 1. 封面
+\begin{frame}[plain]
+  \titlepage
+\end{frame}
+
+% =====================================================================
+\section{研究背景}
+% =====================================================================
+
+% 2. 背景与目标（合并为一张）
+\begin{frame}{研究背景与目标}
+  \textbf{已有结果：}
+  \begin{equation*}
+    \text{（本文所基于的核心公式）}
+  \end{equation*}
+  \begin{itemize}
+    \item 现有框架的特点一。
+    \item 现有框架的特点二。
+  \end{itemize}
+
+  \pause\medskip
+  \begin{block}{本文目标}
+    （一句话概括研究目标。）
+  \end{block}
+\end{frame}
+
+% =====================================================================
+\section{主要结果}
+% =====================================================================
+
+% 3. 设置与符号
+\begin{frame}{设置}
+  \textbf{出发点：}
+  \begin{equation*}
+    \text{（基础方程 / 不等式）}
+  \end{equation*}
+
+  \pause
+  \textbf{关键推广：}
+  \begin{equation*}
+    \text{（本文的推广形式）}
+  \end{equation*}
+\end{frame}
+
+% 4. 主定理
+\begin{frame}{核心定理}
+  \begin{block}{定理}
+    在……条件下，
+    \begin{equation*}
+      \boxed{\;\text{（主要结果）}\;}
+    \end{equation*}
+  \end{block}
+  \begin{itemize}
+    \item 退化情形：……
+    \item 证明关键：……
+  \end{itemize}
+\end{frame}
+
+% =====================================================================
+\section{应用与算例}
+% =====================================================================
+
+% 5. 算例一
+\begin{frame}{算例一：标题}          % <-- 填标题
+  \begin{columns}[T]
+    \begin{column}{0.50\textwidth}
+      \begin{itemize}
+        \item 设置与参数。
+        \item 关键结果。
+        \item 结论。
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \centering
+      % \includegraphics[width=\linewidth]{figs/example1.pdf}
+      \framebox[\linewidth]{\rule{0pt}{4cm}\centering 图片}\\
+      {\footnotesize 图注。}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% 6. 算例二
+\begin{frame}{算例二：标题}          % <-- 填标题
+  \begin{columns}[T]
+    \begin{column}{0.50\textwidth}
+      \begin{itemize}
+        \item 设置与参数。
+        \item 关键结果。
+        \item 结论。
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \centering
+      % \includegraphics[width=\linewidth]{figs/example2.pdf}
+      \framebox[\linewidth]{\rule{0pt}{4cm}\centering 图片}\\
+      {\footnotesize 图注。}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% =====================================================================
+\section{总结}
+% =====================================================================
+
+% 7. 总结 + 展望（合并）
+\begin{frame}{总结与展望}
+  \textbf{主要贡献：}
+  \begin{enumerate}
+    \item 贡献一。
+    \item 贡献二。
+    \item 贡献三。
+  \end{enumerate}
+
+  \pause\medskip
+  \textbf{未来工作：}
+  \begin{itemize}
+    \item 方向一。
+    \item 方向二。
+  \end{itemize}
+\end{frame}
+
+% 8. 感谢
+\begin{frame}[plain]
+  \vfill\centering
+  {\large\alert{感谢各位老师的聆听！}}\\[0.5em]
+  敬请批评指正。
+  \vfill
+\end{frame}
+
+% =====================================================================
+\appendix
+\section*{备用}
+% =====================================================================
+
+% 9. 备用（按需复制）
+\begin{frame}{备用：标题}
+  \begin{itemize}
+    \item 问题表述。
+    \item 回答要点。
+  \end{itemize}
+\end{frame}
+
+\end{document}
